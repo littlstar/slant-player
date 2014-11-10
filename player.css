@@ -1,0 +1,7 @@
+
+.slant.player {
+  display: block;
+  position: relative;
+  min-width: 250px;
+  min-height: 250px;
+}

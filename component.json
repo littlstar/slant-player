@@ -1,0 +1,14 @@
+{
+  "name": "slant-player",
+  "version": "0.0.1",
+  "description": "Core video player API for slant",
+  "scripts": ["index.js"],
+  "styles": ["player.css"],
+  "templates": ["template.html"],
+  "dependencies": {
+    "littlstar/slant-controls": "*",
+    "littlstar/slant-frame": "*",
+    "component/emitter": "*",
+    "component/domify": "*"
+  }
+}
