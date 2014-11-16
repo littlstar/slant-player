@@ -23,6 +23,8 @@ function Player (parent, opts) {
     return new Player(parent, opts);
   }
 
+  opts = opts || {};
+
   var style = getComputedStyle(parent);
   var width = opts.width || parseInt(style.width);
   var height = opts.height || parseInt(style.height);
@@ -31,12 +33,12 @@ function Player (parent, opts) {
   this.el = dom(tpl);
   this.parent = parent;
 
+  opts.frame.height = height;
+  opts.frame.width = width;
+  opts.frame.src = opts.src;
+
   // init video frame
-  this.frame = new Frame(this.el, {
-    height: height,
-    width: width,
-    src: opts.src
-  });
+  this.frame = new Frame(this.el, opts.frame);
 
   // init frame controls
   this.controls = new Controls(this.frame, opts.controls);
