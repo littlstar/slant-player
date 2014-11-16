@@ -1,0 +1,337 @@
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.slant.controls, .slant.controls * {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.slant.controls.fadeIn
+.slant.controls .fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.slant.controls.fadeOut,
+.slant.controls .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.slant.controls {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slant.controls .hidden {
+  display: none !important;
+}
+
+.slant.controls ul {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  font-weight: 100;
+  font-family: Helvetica;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.85);
+  width: 80%;
+  border-radius: 5px;
+}
+
+.slant.controls ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.slant.controls ul li.playpause {
+  width: 10%;
+  vertical-align: middle;
+}
+
+.slant.controls ul li.playpause a {
+  display: block;
+  position: relative;
+  height: auto;
+  vertical-align: middle;
+  padding: .5em 0;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.7;
+
+  webkit-transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+          transition: opacity 0.1s;
+}
+
+.slant.controls ul li.playpause a:hover {
+  opacity: 1;
+}
+
+.slant.controls ul li.playpause a.pause {
+  padding-left: 2%;
+}
+
+.slant.controls ul li.playpause a.replay {
+  padding: 0%;
+  font-size: 1.4em;
+}
+
+.slant.controls ul li.progress {
+  width: 58%;
+  margin: 0;
+  margin-right: 1%;
+  margin-left: 1%;
+  vertical-align: middle;
+  background: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+
+  webkit-transition: height 1s;
+  -webkit-transition: height 1s;
+          transition: height 1s;
+
+  webkit-transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+          transition: opacity 0.1s;
+}
+
+.slant.controls ul li.progress,
+.slant.controls ul li.progress .bar span {
+  height: 5px;
+  border-radius: 2px;
+}
+
+.slant.controls ul li.progress:hover,
+.slant.controls ul li.progress:hover .bar span {
+  height: 10px;
+  opacity: 1;
+}
+
+.slant.controls ul li.progress:hover .scrub {
+  display: block;
+  top: -6px;
+  height: 20px;
+}
+
+.slant.controls ul li.progress .bar {
+  display: block;
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.slant.controls ul li.progress .bar .played,
+.slant.controls ul li.progress .bar .loaded {
+  -moz-transition: width 0.08s;
+  webkit-transition: width 0.08s;
+  -webkit-transition: width 0.08s;
+          transition: width 0.08s;
+}
+
+.slant.controls ul li.progress .bar .played {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  background: rgb(226, 226, 255);
+}
+
+.slant.controls ul li.progress .bar .loaded {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  cursor: pointer;
+  background: #4d4d4d;
+}
+
+.slant.controls ul li.progress .scrub {
+  display: none;
+  position: absolute;
+  top: -10px;
+  z-index: 20;
+  width: 8px;
+  height: 0px;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+
+  -moz-transition: top 0.08s;
+  webkit-transition: top 0.08s;
+  -webkit-transition: top 0.08s;
+          transition: top 0.08s;
+
+  -moz-transition: height 0.08s;
+  webkit-transition: height 0.08s;
+  -webkit-transition: height 0.08s;
+          transition: height 0.08s;
+}
+
+.slant.controls ul li.time {
+  width: 10%;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.slant.controls ul li.time span {
+  display: inline-block;
+  position: relative;
+  font-size: .7em;
+}
+
+.slant.controls ul li.volume {
+  width: 16%;
+  opacity: 0.7;
+
+  webkit-transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+          transition: opacity 0.1s;
+}
+
+.slant.controls ul li.volume:hover {
+  opacity: 1;
+}
+
+.slant.controls ul li.volume .control {
+  display: inline-block;
+  position: relative;
+  width: 10%;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: .8em;
+}
+
+.slant.controls ul li.volume .control.muted {
+  text-decoration: line-through;
+  color: #cecece;
+}
+
+.slant.controls ul li.volume .panel {
+  display: block;
+  position: relative;
+  vertical-align: middle;
+  width: 80%;
+  margin: 0 auto;
+  background: #444;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.slant.controls ul li.volume .panel .slider {
+  display: block;
+  position: relative;
+}
+
+.slant.controls ul li.volume .panel .slider .level {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 3px 0px;
+  background: rgb(226, 226, 255);
+  border-radius: 2px;
+}
+
+.slant.controls ul li.volume .panel .slider .handle {
+  display: block;
+  position: absolute;
+  top: -5px;
+  z-index: 15;
+  width: 5px;
+  height: 15px;
+  margin-left: -1px;
+  margin-right: -7px;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+
+
+.slant.frame {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.slant.frame .container {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.slant.frame video {
+  display: none;
+}
+
+.slant.frame canvas {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+.slant.player {
+  display: block;
+  position: relative;
+  min-width: 250px;
+  min-height: 250px;
+}
+
+.slant.player .frame {
+  z-index: 99;
+}
+
+.slant.player .controls {
+  z-index: 100;
+}
+
+
